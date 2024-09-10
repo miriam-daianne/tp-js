@@ -1,5 +1,2 @@
-let table = document.getElementById('list_2');
-
-function color(){
-    table.style.backgroundColor = "red";
-}
+const testando = document.getElementById('ml24351');
+testando.style.backgroundColor = 'pink';
