@@ -32,10 +32,40 @@ function dramasDatas(){
         }
     }
 
-    
+
     //  número de dramas por ano --------------------------------------------------------------------------------------
 
-    // acho que vou precisar criar uma função onde eu vou procurar o menor ano presente na tabela, e a partir dele acrescentar +1 até onde não houver um dado para ser correspondente e com isso fazer uma busca como as que eu tava fazendo 
+    let years = document.querySelectorAll('.mdl-style-col-year');
+
+    let yearsArray =[];
+
+    for(let i = 0; i < years.length; i++){
+
+        let year = parseInt(years[i].textContent);
+
+        yearsArray.push(year);
+    }
+
+    let objYearData = {};
+    
+
+    for(let i = 0; i <yearsArray.length; i++){
+        let yearValue = yearsArray[i];
+
+
+        if(objYearData[yearValue]){
+            objYearData[yearValue]++;
+        }else{
+            objYearData[yearValue] = 1;
+        }
+        
+    }
+    let lineYearsData = [];
+
+    for(let key in objYearData){
+        lineYearsData.push({year: key, num: objYearData[key]});
+    }
+
 
     // número de dramas por tipos ------------------------------------------------------------------------------------
 
@@ -82,7 +112,7 @@ function dramasDatas(){
     let one = 0;
     let zeropoint = 0;
     let zero = 0;
-    
+
 
     for(let i = 0; i < lines.length; i++){
 
@@ -101,84 +131,81 @@ function dramasDatas(){
             }else if(score[j].textContent == '9.0'){
                 nine++;
                 lines[i].style.backgroundColor = '#CEE1E7';
-                
+
             }else if(score[j].textContent == '8.5'){
                 eightpoint++;
                 lines[i].style.backgroundColor = '#DDE8EC';
-                
+
             }else if(score[j].textContent == '8.0'){
                 eight++;
                 lines[i].style.backgroundColor = '#DDE8EC';
-                
+
             }else if(score[j].textContent == '7.5'){
                 sevenpoint++;
                 lines[i].style.backgroundColor = '#EAEFF5';
-                
+
             }else if(score[j].textContent == '7.0'){
                 seven++;
                 lines[i].style.backgroundColor = '#EAEFF5';
-                
+
             }else if(score[j].textContent == '6.5'){
                 sixpoint++;
                 lines[i].style.backgroundColor = '#EAEFF5';
-                
+
             }else if(score[j].textContent == '6.0'){
                 six++;
                 lines[i].style.backgroundColor = '#EAEFF5';
-                
+
             }else if(score[j].textContent == '5.5'){
                 fivepoint++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '5.0'){
                 five++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '4.5'){
                 fourpoint++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '4.0'){
                 four++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '3.5'){
                 threepoint++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '3.0'){
                 three++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '2.5'){
                 twopoint++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '2.0'){
                 two++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '1.5'){
                 onepoint++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '1.0'){
                 one++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '0.5'){
                 zeropoint++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }else if(score[j].textContent == '0.0'){
                 zero++;
                 lines[i].style.backgroundColor = '#FDEDE0';
-                
+
             }
-
-
-
-         }
+        }
 
     }
 
