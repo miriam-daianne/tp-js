@@ -218,11 +218,9 @@ function dramasDatas(){
             {name:'Hong Kong', num: hongKongNum },
             {name:'Thailand', num: thailandNum },
             {name:'Philipines', num: philppinesNum },
-            {name:'Taiwana', num: taiwanNum }
+            {name:'Taiwan', num: taiwanNum }
         ],
-        yearDatas:[
-            {}
-        ],
+        yearDatas:lineYearsData,
         typesDramas: [
             {type:'Drama', num:dramaNum},
             {type:'Movie', num:movieNum},
