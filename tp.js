@@ -32,7 +32,6 @@ function dramasDatas() {
         }
     }
 
-
     //  número de dramas por ano --------------------------------------------------------------------------------------
 
     let years = document.querySelectorAll('.mdl-style-col-year');
@@ -83,8 +82,7 @@ function dramasDatas() {
         }
     }
 
-
-    //  número de notas
+    //  número de notas-----------------------------------------------------------------------------------------------
 
     let lines = document.querySelectorAll('tbody tr');
     let scoresArray = [];
@@ -101,15 +99,15 @@ function dramasDatas() {
 
 
             if (score == 10.0) {
-                lines[i].style.backgroundColor = '#ADB8D6';
+                lines[i].style.backgroundColor = '#9DB5CF';
             } else if (score <= 9.5 && score >= 9.0) {
-                lines[i].style.backgroundColor = '#B9CBE1';
+                lines[i].style.backgroundColor = '#B4CBDB';
             } else if (score <= 8.5 && score >= 8.0) {
-                lines[i].style.backgroundColor = '#DDD7E5';
+                lines[i].style.backgroundColor = '#D3E4EB';
             } else if (score <= 7.5 && score >= 5.0) {
-                lines[i].style.backgroundColor = '#FFFBF2';
+                lines[i].style.backgroundColor = '#EDE9E8';
             } else if (score <= 4.5 && score >= 0.0) {
-                lines[i].style.backgroundColor = '#FFE7E7';
+                lines[i].style.backgroundColor = '#DCD1CF';
             }
         }
     }
